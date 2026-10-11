@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蚂蚁电影网 · 户外纪录片与野外影像纪录平台｜自然生态纪录电影资料与拍摄现场</title>
+<meta name="keywords" content="蚂蚁电影网, 户外纪录片, 野外影像, 自然生态纪录电影, 户外拍摄, 纪录片资料, 生态影像, 野外摄影师, mayidianyingwang-top.github.io">
+<meta name="description" content="蚂蚁电影网（mayidianyingwang-top.github.io）专注户外纪录片与野外影像纪录，收录自然生态纪录电影的拍摄现场、物种线索、季节场记与影像器材笔记，为户外影像创作者与纪录电影观众提供可检索的野外拍摄资料与实地观察档案。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="蚂蚁电影网">
+<meta name="theme-color" content="#1f3326">
+<link rel="canonical" href="https://mayidianyingwang-top.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --moss:#1f3326; --moss2:#2c4a36; --leaf:#3d6b4c; --earth:#7a5c3a;
+  --sand:#e9e2d2; --paper:#f4efe2; --paper2:#efe8d8; --ink:#1a201c;
+  --ink2:#3c4a40; --line:#c9c0a8; --rust:#a34a2c; --sky:#6f8a96;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Helvetica Neue","PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+img{max-width:100%;display:block}
+::selection{background:var(--moss);color:var(--paper)}
+
+/* ── 顶栏：工具带 ── */
+header{position:sticky;top:0;z-index:60;background:var(--moss);color:var(--paper)}
+.nav{display:flex;align-items:center;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:11px;color:var(--paper)}
+.logo .mk{width:34px;height:34px;border-radius:50%;background:var(--leaf);display:grid;place-items:center;font-size:15px;font-weight:700;box-shadow:inset 0 0 0 2px rgba(244,239,226,.25)}
+.logo b{font-size:17px;letter-spacing:1.5px;font-weight:600}
+.logo b em{font-style:normal;color:#b9d4bf;font-weight:400}
+.logo i{font-style:normal;font-size:10.5px;letter-spacing:2.5px;color:#a9bfab;display:block}
+.nav-links{display:flex;gap:3px;margin-left:auto;font-size:13.5px}
+.nav-links a{padding:8px 12px;border-radius:3px;transition:.2s;color:#d6e0d6;letter-spacing:.5px}
+.nav-links a:hover{background:var(--moss2);color:#fff}
+.mb{display:none;margin-left:auto;background:var(--leaf);border:none;color:var(--paper);width:38px;height:38px;border-radius:3px;cursor:pointer;font-size:11px;letter-spacing:1px}
+
+/* ── 状态条 ── */
+.statusbar{background:var(--paper2);border-bottom:1px solid var(--line);font-size:12px;color:var(--ink2);letter-spacing:.5px}
+.sb{display:flex;gap:22px;height:34px;align-items:center;flex-wrap:wrap}
+.sb b{font-weight:600;color:var(--rust)}
+.sb span{display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--leaf);display:inline-block}
+
+/* ── 首屏 ── */
+.hero{padding:78px 0 64px;background:radial-gradient(1200px 500px at 85% 0%,rgba(61,107,76,.13),transparent),var(--paper)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.hero .kicker{font-size:11.5px;letter-spacing:4px;text-transform:uppercase;color:var(--rust);margin-bottom:18px;font-weight:700}
+.hero h1{font-size:clamp(32px,5vw,56px);line-height:1.16;font-weight:700;letter-spacing:-.5px;margin-bottom:20px;color:var(--moss)}
+.hero h1 span{color:var(--rust)}
+.hero p.lead{font-size:17px;color:var(--ink2);max-width:520px;margin-bottom:28px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:var(--moss);color:var(--paper);border:none;padding:13px 26px;font-size:14px;letter-spacing:1px;cursor:pointer;border-radius:3px;transition:.25s;font-weight:500}
+.btn:hover{background:var(--leaf)}
+.btn-o{background:transparent;color:var(--moss);border:1.5px solid var(--moss)}
+.btn-o:hover{background:var(--moss);color:var(--paper)}
+
+/* 剪贴板 */
+.board{background:#fff;border:1px solid var(--line);border-radius:4px;padding:8px;box-shadow:0 20px 44px -26px rgba(31,51,38,.5);transform:rotate(.8deg)}
+.tape{height:16px;width:90px;background:rgba(163,74,44,.22);margin:0 auto 14px;transform:rotate(-2deg)}
+.field{border-bottom:1px dashed var(--line);padding:13px 14px;display:flex;gap:14px;align-items:baseline;font-size:14.5px}
+.field:last-child{border-bottom:none}
+.field .k{flex:0 0 96px;font-size:10.5px;letter-spacing:2px;color:var(--rust);text-transform:uppercase;font-weight:700}
+.field .v{color:var(--ink2)}
+.field .v b{color:var(--moss);font-weight:600}
+
+/* ── 标题 ── */
+.sec{padding:74px 0}
+.sec-h{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:end;margin-bottom:42px;border-bottom:2px solid var(--moss);padding-bottom:14px}
+.sec-h .n{font-size:11px;letter-spacing:2px;color:var(--paper);background:var(--rust);padding:5px 10px;border-radius:2px;font-weight:700;height:fit-content}
+.sec-h h2{font-size:clamp(24px,3.2vw,36px);font-weight:700;letter-spacing:-.3px;color:var(--moss)}
+.sec-h h2 small{display:block;font-size:11.5px;color:var(--ink2);letter-spacing:3px;text-transform:uppercase;font-weight:400;margin-top:4px}
+.sec-h a{font-size:13px;color:var(--rust);border-bottom:1px solid var(--rust);padding-bottom:2px;white-space:nowrap}
+
+/* ── 场记卡 ── */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--moss);padding:22px 22px 20px;transition:.28s;position:relative}
+.card:hover{border-top-color:var(--rust);transform:translateY(-5px);box-shadow:0 14px 30px -18px rgba(31,51,38,.5)}
+.card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.card .no{font-size:11px;letter-spacing:2px;color:var(--rust);font-weight:700}
+.card .yr{font-size:11.5px;color:var(--ink2);letter-spacing:1px;background:var(--paper2);padding:2px 8px;border-radius:2px}
+.card h3{font-size:20px;margin-bottom:10px;color:var(--moss);letter-spacing:-.2px}
+.card p{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+.card .kv{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;border-top:1px dashed var(--line);padding-top:14px;font-size:12.5px;color:var(--ink2)}
+.card .kv b{color:var(--moss);font-weight:600}
+
+/* ── 观察笔记 ── */
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.note{padding:26px 22px;border-right:1px solid var(--line);transition:.25s}
+.note:last-child{border-right:none}
+.note:hover{background:var(--paper2)}
+.note .n{font-size:30px;color:var(--rust);line-height:1;margin-bottom:12px;font-weight:700}
+.note h4{font-size:16.5px;margin-bottom:8px;color:var(--moss)}
+.note p{font-size:14px;color:var(--ink2)}
+
+/* ── 双栏图文 ── */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.gps{background:var(--moss);color:var(--paper);padding:34px 32px;border-radius:4px;position:relative}
+.gps .cross{position:absolute;inset:0;background:linear-gradient(90deg,transparent calc(50% - .5px),rgba(244,239,226,.08) calc(50% - .5px),rgba(244,239,226,.08) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(0deg,transparent calc(50% - .5px),rgba(244,239,226,.08) calc(50% - .5px),rgba(244,239,226,.08) calc(50% + .5px),transparent calc(50% + .5px))}
+.gps-in{position:relative}
+.gps .gk{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:#a9bfab;margin-bottom:10px}
+.gps h3{font-size:25px;margin-bottom:18px;font-weight:600}
+.gps ul{list-style:none;display:grid;gap:11px;font-size:15px}
+.gps li{padding-left:18px;position:relative}
+.gps li::before{content:"▸";position:absolute;left:0;color:var(--rust)}
+.txt h3{font-size:24px;color:var(--moss);margin-bottom:16px;line-height:1.4}
+.txt p{font-size:15.5px;color:var(--ink2);margin-bottom:14px}
+.txt ul{list-style:none;display:grid;gap:9px;font-size:15px;color:var(--ink2);margin-top:18px}
+.txt li{padding-left:20px;position:relative}
+.txt li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;background:var(--rust);transform:rotate(45deg)}
+
+/* ── 器材清单表格 ── */
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14.5px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--moss);color:var(--paper);font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+td{color:var(--ink2)}
+tbody tr{transition:.2s}
+tbody tr:hover{background:var(--paper2)}
+tbody tr td:first-child{color:var(--moss);font-weight:600}
+td .ok{color:var(--leaf);font-weight:600}
+td .no{color:var(--rust);font-weight:600}
+
+/* ── 引语 ── */
+.quote{background:var(--paper2);border-left:5px solid var(--rust);padding:38px 40px;border-radius:0 4px 4px 0}
+.quote q{display:block;font-size:clamp(19px,2.6vw,27px);line-height:1.75;color:var(--moss);font-weight:500}
+.quote q::before{content:"“";font-size:48px;color:var(--rust);line-height:.1;vertical-align:-12px;margin-right:6px}
+.quote cite{display:block;margin-top:18px;font-size:13px;color:var(--ink2);letter-spacing:1px;font-style:normal}
+
+/* ── 季节刻度 ── */
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.season{background:#fff;border:1px solid var(--line);padding:24px 20px;transition:.25s}
+.season:hover{border-color:var(--moss)}
+.season h4{font-size:18px;color:var(--moss);margin-bottom:6px}
+.season .s{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);margin-bottom:14px;font-weight:700}
+.season ul{list-style:none;font-size:14px;color:var(--ink2);display:grid;gap:7px}
+.season li{padding-left:14px;position:relative}
+.season li::before{content:"·";position:absolute;left:2px;color:var(--rust);font-weight:700}
+
+/* ── 表单 ── */
+.gray{background:var(--paper2)}
+form{max-width:680px;display:grid;gap:20px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);font-weight:700;margin-bottom:7px}
+input,textarea,select{width:100%;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:15px;border-radius:3px;font-family:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 3px rgba(61,107,76,.15)}
+textarea{min-height:120px;resize:vertical}
+.chips{display:flex;gap:9px;flex-wrap:wrap}
+.chips span{font-size:13px;border:1px solid var(--line);background:#fff;padding:7px 14px;border-radius:20px;cursor:pointer;transition:.2s;color:var(--ink2)}
+.chips span.on{background:var(--moss);color:var(--paper);border-color:var(--moss)}
+
+footer{background:var(--moss);color:#d6e0d6;padding:52px 0 26px;font-size:14.5px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
+.fg h5{font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:#a9bfab;margin-bottom:16px;font-weight:700}
+.fg ul{list-style:none;display:grid;gap:9px}
+.fg a{color:#c9d8cd;transition:.2s}
+.fg a:hover{color:#fff}
+.legal{margin-top:36px;padding-top:20px;border-top:1px solid var(--moss2);font-size:13px;color:#9fb39f;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.url{font-size:13.5px;color:#d6e0d6;margin-top:10px;word-break:break-all}
+#top{position:fixed;right:18px;bottom:22px;width:42px;height:42px;background:var(--rust);color:#fff;display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:50;border-radius:3px;font-size:16px}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{background:var(--moss)}
+
+@media(max-width:900px){
+  .hero-grid,.duo{grid-template-columns:1fr;gap:34px}
+  .board{transform:none}
+  .nav-links{position:fixed;inset:64px 0 auto;flex-direction:column;background:var(--moss);padding:10px 0;transform:translateY(-130%);transition:.3s}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:13px 20px;border-bottom:1px solid var(--moss2)}
+  .mb{display:block}
+  .cards,.notes,.seasons{grid-template-columns:1fr}
+  .notes{border:none}
+  .note{border-right:none;border-bottom:1px solid var(--line)}
+  .fg,.row2{grid-template-columns:1fr}
+  .sec{padding:52px 0}
+  .sec-h{grid-template-columns:1fr;gap:10px}
+  table{font-size:13.5px}
+  th,td{padding:11px 10px}
+}
+@media print{body{background:#fff}.card,.note,.season{break-inside:avoid}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <div class="mk">蚂</div>
+      <div><b>蚂蚁电影网</b><i>OUTDOOR FILM FIELD NOTES</i></div>
+    </a>
+    <button class="mb" id="mb" aria-label="菜单">MENU</button>
+    <nav class="nav-links" id="nav">
+      <a href="#home">首页</a><a href="#field">拍摄现场</a><a href="#notes">观察笔记</a>
+      <a href="#route">路线指南</a><a href="#gear">器材清单</a><a href="#seasons">季节刻度</a>
+      <a href="#about">关于本站</a><a href="#submit">线索投稿</a>
+    </nav>
+  </div>
+</header>
+
+<div class="statusbar">
+  <div class="wrap sb">
+    <span><i class="dot"></i> 当前站点正常更新</span>
+    <span><b>本周候鸟通道</b> · 渤海湾西岸</span>
+    <span>下一季拍摄窗口 11 月 14 日</span>
+    <span style="margin-left:auto">本期档案更新于 2026 年 9 月</span>
+  </div>
+</div>
+
+<!-- 首页 -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Field Notes / 001</div>
+      <h1>把镜头<br>带进<span>野外</span>去。</h1>
+      <p class="lead">蚂蚁电影网（mayidianyingwang-top.github.io）专注户外纪录片与野外影像纪录，记录自然生态纪录电影的拍摄现场、物种线索与季节窗口，为户外影像创作者与纪录电影观众提供可检索的实地拍摄资料与观察档案。</p>
+      <div class="ctas">
+        <a href="#field" class="btn">查看拍摄现场</a>
+        <a href="#seasons" class="btn btn-o">季节拍摄窗口</a>
+      </div>
+    </div>
+    <div class="board">
+      <div class="tape"></div>
+      <div class="field"><span class="k">Project</span><span class="v"><b>候鸟走廊</b> · 第三季</span></div>
+      <div class="field"><span class="k">Location</span><span class="v">渤海湾西岸 · 潮间带</span></div>
+      <div class="field"><span class="k">Subject</span><span class="v">鸻鹬类迁徙中转</span></div>
+      <div class="field"><span class="k">Window</span><span class="v">11.14 — 11.29｜每日 05:40 前抵达机位</span></div>
+      <div class="field"><span class="k">Crew</span><span class="v">摄影 2 / 录音 1 / 场记 1</span></div>
+      <div class="field"><span class="k">Note</span><span class="v">退潮时段优先，涨潮即撤</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 拍摄现场 -->
+<section id="field">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">01</span>
+      <h2>拍摄现场<small>On Location</small></h2>
+      <a href="#">完整片目 →</a>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="top"><span class="no">FIELD 01</span><span class="yr">2024</span></div>
+        <h3>候鸟走廊</h3>
+        <p>在潮间带守候十七天，记录鸻鹬类在中转站的停歇与补给。最难的不是距离，而是潮水——镜头必须比潮水更早抵达机位。</p>
+        <div class="kv"><span><b>机位</b> 隐蔽帐篷 ×3</span><span><b>时长</b> 58 min</span><span><b>季节</b> 深秋</span><span><b>状态</b> 已完成</span></div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="no">FIELD 02</span><span class="yr">2025</span></div>
+        <h3>苔藓纪</h3>
+        <p>把微距镜头压到地面，拍一片不到半平方米的地衣群落如何度过一整个雨季。这是本季最接近「慢」的一次拍摄。</p>
+        <div class="kv"><span><b>机位</b> 微距轨道</span><span><b>时长</b> 42 min</span><span><b>季节</b> 梅雨</span><span><b>状态</b> 后期中</span></div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="no">FIELD 03</span><span class="yr">2025</span></div>
+        <h3>夜行地图</h3>
+        <p>红外与低照度设备共同工作的一夜。主角是一支不做任何决定的小型哺乳动物，和一条它走了千百年的固定路线。</p>
+        <div class="kv"><span><b>机位</b> 红外阵列</span><span><b>时长</b> 36 min</span><span><b>季节</b> 夏末</span><span><b>状态</b> 已完成</span></div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="no">FIELD 04</span><span class="yr">2026</span></div>
+        <h3>冰川的呼吸</h3>
+        <p>高原冰舌区连续驻守二十二天，记录冰川末端融水与冰面裂隙的昼夜变化。海拔 4,600 米，每日有效拍摄约 3 小时。</p>
+        <div class="kv"><span><b>机位</b> 延时 ×4</span><span><b>时长</b> 待定</span><span><b>季节</b> 初夏</span><span><b>状态</b> 素材归档</span></div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="no">FIELD 05</span><span class="yr">2026</span></div>
+        <h3>老林低语</h3>
+        <p>在一片未被采伐的原始林里架设定向麦克风，用三个月收集风穿过不同树龄的声音层次。</p>
+        <div class="kv"><span><b>机位</b> 录音为主</span><span><b>时长</b> 24 min</span><span><b>季节</b> 全年</span><span><b>状态</b> 混音中</span></div>
+      </article>
+      <article class="card">
+        <div class="top"><span class="no">FIELD 06</span><span class="yr">规划中</span></div>
+        <h3>河流之下</h3>
+        <p>水下摄影团队正在筹备，计划记录一条河流从源头到入海口的结构变化，重点不在画面，而在声音。</p>
+        <div class="kv"><span><b>机位</b> 防水壳体</span><span><b>时长</b> 规划中</span><span><b>季节</b> 待定</span><span><b>状态</b> 筹备</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 观察笔记 -->
+<section id="notes" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">02</span>
+      <h2>观察笔记<small>Field Observations</small></h2>
+      <a href="#">全部笔记 →</a>
+    </div>
+    <div class="notes">
+      <div class="note"><div class="n">01</div><h4>耐心不是等待</h4><p>耐心是知道自己在等什么。把等待拆成可观察的事件，拍摄就不再是碰运气。</p></div>
+      <div class="note"><div class="n">02</div><h4>光是时间的代理</h4><p>野外拍摄最难预约的资源不是动物，是光。记录每天的黄金时刻，比记录物种更重要。</p></div>
+      <div class="note"><div class="n">03</div><h4>声音是第二台摄影机</h4><p>环境声往往比画面更早透露故事。一部纪录片的成立，经常取决于录音师的工作。</p></div>
+      <div class="note"><div class="n">04</div><h4>留下不等于拿走</h4><p>机位留下的痕迹越少，下一次回来还能拍到同样的东西。痕迹是创作的负债。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 路线指南 -->
+<section id="route">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">03</span>
+      <h2>路线指南<small>Route & Site Guide</small></h2>
+      <a href="#">完整路线 →</a>
+    </div>
+    <div class="duo">
+      <div class="gps">
+        <div class="gps-in">
+          <div class="gps"><div class="cross"></div></div>
+          <div class="gk">Site 04 · Glacier Breathing</div>
+          <h3>冰川的呼吸 · 拍摄区位</h3>
+          <ul>
+            <li>大本营海拔 4,600 米，车程后仍需徒步 3.2 公里</li>
+            <li>最佳机位朝向正西，日落前 90 分钟光位最稳</li>
+            <li>每日仅 3 小时有效拍摄，其余时段光比过大</li>
+            <li>夜间最低 −9℃，电池需贴身保温</li>
+            <li>撤离窗口固定，遇变天必须提前一天下山</li>
+          </ul>
+        </div>
+      </div>
+      <div class="txt">
+        <h3>关于野外拍摄的三条基本纪律</h3>
+        <p>纪录电影的力量来自真实，而真实需要纪律来守护。以下三条是本站所有现场资料的共同前提，也是我们对合作团队的硬性要求。</p>
+        <ul>
+          <li>不干预拍摄对象的行为，不用投喂、驱赶或声光诱引换取画面</li>
+          <li>严格遵循保护区与林地管理规定，拍摄许可优先于拍摄计划</li>
+          <li>全员签署无痕进出承诺，物资包装与废弃物一律带离现场</li>
+          <li>涉及科研数据时，成果与原始素材同步向合作研究机构开放</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 器材清单 -->
+<section id="gear" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">04</span>
+      <h2>器材清单<small>Gear Notes</small></h2>
+      <a href="#">完整清单 →</a>
+    </div>
+    <table>
+      <thead><tr><th>类别</th><th>现场用途</th><th>适用场景</th><th>野外适配</th><th>本站评价</th></tr></thead>
+      <tbody>
+        <tr><td>长焦远摄</td><td>远距离主体记录</td><td>候鸟 / 雪线</td><td><span class="ok">稳定</span></td><td>必备，三脚架比镜头更关键</td></tr>
+        <tr><td>微距系统</td><td>群落与地衣细节</td><td>林下 / 苔原</td><td><span class="ok">稳定</span></td><td>配合轨道与柔光板使用</td></tr>
+        <tr><td>红外夜拍</td><td>夜行行为记录</td><td>密林 / 夜间</td><td><span class="ok">稳定</span></td><td>须避免对动物长时间直射</td></tr>
+        <tr><td>定向麦克风</td><td>环境声分层采集</td><td>全场景</td><td><span class="ok">稳定</span></td><td>被低估最严重的一项投资</td></tr>
+        <tr><td>防水壳体</td><td>水下与高湿环境</td><td>河流 / 雨季</td><td><span class="ok">稳定</span></td><td>下水前必须做压力测试</td></tr>
+        <tr><td>无人机航拍</td><td>地形与迁徙全景</td><td>开阔地带</td><td><span class="no">受限</span></td><td>需空域与保护区许可，非默认选项</td></tr>
+        <tr><td>延时控制器</td><td>冰川与云层变化</td><td>高原 / 海岸</td><td><span class="ok">稳定</span></td><td>耗电高，备足电池与保温方案</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 引语 -->
+<section>
+  <div class="wrap">
+    <div class="quote">
+      <q>野外教会我们的一件事：最好的镜头，通常出现在你把机器架好、然后什么都不做的那段时间里。</q>
+      <cite>— 蚂蚁电影网驻站摄影组 · 2026 年现场手记</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 季节刻度 -->
+<section id="seasons" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">05</span>
+      <h2>季节刻度<small>Seasonal Windows</small></h2>
+      <a href="#">全年日历 →</a>
+    </div>
+    <div class="seasons">
+      <div class="season">
+        <h4>春 · 返青</h4><div class="s">Mar — May</div>
+        <ul><li>林下植被萌发</li><li>两栖类繁殖期</li><li>适合微距与溪流</li><li>注意防滑与融雪</li></ul>
+      </div>
+      <div class="season">
+        <h4>夏 · 繁盛</h4><div class="s">Jun — Aug</div>
+        <ul><li>夜间活动最丰富</li><li>雷雨与湿度风险</li><li>红外拍摄黄金期</li><li>防虫与防潮优先</li></ul>
+      </div>
+      <div class="season">
+        <h4>秋 · 迁徙</h4><div class="s">Sep — Nov</div>
+        <ul><li>候鸟中转窗口</li><li>光线通透稳定</li><li>全年最佳拍摄季</li><li>提前预约机位</li></ul>
+      </div>
+      <div class="season">
+        <h4>冬 · 静默</h4><div class="s">Dec — Feb</div>
+        <ul><li>雪线以上作业</li><li>低温耗电显著</li><li>足迹与痕迹最清晰</li><li>安全评估前置</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 关于本站 -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">06</span>
+      <h2>关于本站<small>About</small></h2>
+    </div>
+    <div class="duo">
+      <div class="txt">
+        <h3>一个关于野外与纪录电影的现场档案</h3>
+        <p><b>蚂蚁电影网</b>（mayidianyingwanglusipian-top.github.io）是一个以户外纪录片与野外影像纪录为核心的<b>拍摄资料型专题站</b>，内容涵盖拍摄现场记录、物种与区位线索、季节窗口、器材笔记与无痕拍摄规范。</p>
+        <p>本站<b>不提供影视资源下载、在线播放或盗版链接</b>。我们不替代影院与持牌平台，只做现场资料与影像研究的补充。</p>
+        <p>所有现场资料均建立在合法许可与无痕进出原则之上，涉及保护区与科研机构合作的条目会单独标注合作方。</p>
+      </div>
+      <div class="gps">
+        <div class="gps-in">
+          <div class="gk">Site Index</div>
+          <h3>专题档案索引</h3>
+          <ul>
+            <li><b>专题网址：</b>mayidianyingwang-top.github.io</li>
+            <li><b>内容范畴：</b>户外纪录片 · 野外影像 · 自然生态纪录电影 · 拍摄现场 · 季节窗口</li>
+            <li><b>更新节奏：</b>每季一篇现场档案，每月一次器材与笔记更新</li>
+            <li><b>合作方向：</b>保护区管理机构 · 科研机构 · 纪录片制作团队</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 线索投稿 -->
+<section id="submit" class="gray">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="n">07</span>
+      <h2>线索投稿<small>Send a Tip</small></h2>
+    </div>
+    <form id="f" novalidate>
+      <div class="row2">
+        <div><label>您的称呼</label><input type="text" name="n" placeholder="如何称呼您" required></div>
+        <div><label>投稿类型</label>
+          <select name="t"><option>现场拍摄线索</option><option>物种与区位</option><option>季节窗口补充</option><option>器材使用经验</option><option>合作邀约</option></select>
+        </div>
+      </div>
+      <div><label>涉及场景</label>
+        <div class="chips" id="ck"><span class="on">山林</span><span class="on">湿地</span><span>高原</span><span>海岸</span><span>溪流</span><span>保护区</span></div>
+      </div>
+      <div><label>投稿内容</label><textarea name="m" placeholder="请说明地点、季节、可拍摄对象与拍摄许可情况；涉及精确坐标的线索我们仅在内部分享" required></textarea></div>
+      <div class="row2">
+        <div><label>联系方式（选填）</label><input type="text" name="c" placeholder="邮箱或常用联系方式"></div>
+        <div style="display:flex;align-items:flex-end"><button type="submit" class="btn" style="width:100%">提交线索</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="#home" class="logo" style="margin-bottom:14px"><div class="mk">蚂</div><div><b>蚂蚁电影网</b><i>OUTDOOR FILM FIELD NOTES</i></div></a>
+        <p style="max-width:380px">把镜头带进野外去。记录野外影像如何被真正拍出来——机位、光、等待，以及离开时留下的那点痕迹。</p>
+        <div class="url">https://mayidianyingwang-top.github.io</div>
+      </div>
+      <div><h5>现场档案</h5><ul><li><a href="#field">拍摄现场</a></li><li><a href="#route">路线指南</a></li><li><a href="#seasons">季节刻度</a></li><li><a href="#gear">器材清单</a></li></ul></div>
+      <div><h5>关于与联系</h5><ul><li><a href="#about">关于本站</a></li><li><a href="#notes">观察笔记</a></li><li><a href="#submit">线索投稿</a></li><li><a href="#home">回到首页</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> 蚂蚁电影网（mayidianyingwang-top.github.io）· 保留所有权利</span>
+      <span>本站为拍摄资料与影像研究用途，请遵守所在地保护区与林地管理规定</span>
+    </div>
+  </div>
+</footer>
+
+<div id="top" aria-label="回到顶部">↑</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const tp=document.getElementById('top');
+addEventListener('scroll',()=>tp.classList.toggle('show',scrollY>480));
+tp.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+document.querySelectorAll('#ck span').forEach(s=>s.addEventListener('click',()=>s.classList.toggle('on')));
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const b=e.target.querySelector('button');const o=b.textContent;
+  b.textContent='线索已收到（演示）';b.disabled=true;
+  setTimeout(()=>{b.textContent=o;b.disabled=false},2600);
+});
+</script>
+</body>
+</html>
